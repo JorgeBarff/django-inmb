@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h1>Bienvenido, {{ request.user.username }}</h1>
+    <p>Aquí se mostrarán las funcionalidades del CRM Inmobiliario.</p>
+    <p><a href="{% url 'logout' %}">Cerrar sesión</a></p>
+  </body>
+</html>

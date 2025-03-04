@@ -38,8 +38,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('', include('apps.usuarios.urls')),  # <- Agrega esto para la página principal
     path('usuarios/', include('apps.usuarios.urls')),
+    
     path('inmobiliarias/', include('apps.inmobiliarias.urls')),
     path('propiedades/', include('apps.propiedades.urls')),
     path('integraciones/', include('apps.integraciones.urls')),
@@ -48,6 +50,8 @@ urlpatterns = [
 # Permitir servir archivos multimedia en desarrollo
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
 
 
 
